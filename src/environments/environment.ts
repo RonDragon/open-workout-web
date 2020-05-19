@@ -3,6 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+  api: '/api/workout',
+  web: '',
+  originApi: 'http://localhost:3000',
   production: false
 };
 
