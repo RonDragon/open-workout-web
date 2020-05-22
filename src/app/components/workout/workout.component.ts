@@ -1,4 +1,6 @@
+import { UserService } from 'src/app/services/user.service';
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-workout',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./workout.component.css']
 })
 export class WorkoutComponent implements OnInit {
-
-  constructor() { }
+  userDataSubscription: Subscription;
+  userData;
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
+    this.userService.userDataSubject.subscribe(data => {
+      this.userData = data;
+    })
   }
 
 }

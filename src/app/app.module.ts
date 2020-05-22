@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatButtonModule} from '@angular/material/button';
 
 import {
   SocialLoginModule,
@@ -47,6 +48,7 @@ export function provideConfig() {
     BrowserAnimationsModule,
     FormsModule,
     MatToolbarModule,
+    MatButtonModule
   ],
   providers: [
     {

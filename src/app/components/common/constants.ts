@@ -8,4 +8,13 @@ export class Constants{
 
   public static getUserData = '/getUserData';
 
+  public static addWorkout = '/addWorkout';
+
+  public static updateWorkout = '/updateWorkout';
+
+  public static deleteWorkout = '/deleteWorkout';
+
+
+
+
 }

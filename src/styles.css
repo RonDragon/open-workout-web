@@ -1,3 +1,55 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+*{
+  transition: 0.5s !important;
+}
+
+.login{
+  width: 350px;
+  height: 200px;
+  font-size: 40px;
+}
+.mat-fab .mat-button-wrapper {
+  padding: 14px 0 !important;
+  display: inline-block;
+  line-height: 18px !important;
+}
+ .mat-fab {
+  font-family: Roboto,"Helvetica Neue",sans-serif;
+  font-size: 12px !important;
+  font-weight: 1000;
+}
+.google{
+  background-color: white !important;
+  color: black !important;
+}
+
+.google:hover{
+  margin-top: 20px;
+  background-color: rgb(190, 190, 190);
+  color: black;
+}
+
+
+
+.facebook{
+  background-color:rgb(0, 76, 207) !important;
+  color: rgb(255, 255, 255) !important;
+}
+.facebook:hover{
+  background-color:rgb(5, 55, 143);
+  color: rgb(255, 255, 255);
+}
+
+.loginIcon{
+  margin-top:15px;
+  margin-left:12px;
+  width: 40px;
+}
+
+.icon{
+  margin-top:6px;
+  margin-left:12px;
+  width: 20px;
+}

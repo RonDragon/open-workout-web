@@ -1,4 +1,13 @@
-<mat-toolbar>Dragon Claw Workout
+<mat-toolbar>
+  <div *ngIf="loggedIn">
+  <h5 style="display: inline-block;">Welcome {{loggedUser.name}}! </h5>
+  <button  mat-fab type="button"
+  (click)="signOut()"
+   [ngClass]="{'facebook':loggedUser.provider === 'FACEBOOK','google': loggedUser.provider === 'GOOGLE'}">
+   Sign Out
+   <br>
+   <img *ngIf="icon" style="width: 15px;" [src]="icon" />
 
-  <button type="button" (click)="signOut()" >Sign Out</button>
+  </button>
+</div>
 </mat-toolbar>
