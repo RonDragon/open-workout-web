@@ -1,19 +1,16 @@
-import * as express from "express";
+//Install express server
+const express = require('express');
+const path = require('path');
 
-class Server {
-  public app: express.Application;
-  constructor() {
-    this.app = express();
-  }
-  // Serve only the static files form the dist directory
+const app = express();
 
-  public config(): void {
-    const app = this.app;
-    app.use(express.static("./dist/<open-workout-web>"));
-    app.listen(process.env.PORT || 8080);
-    app.get("/*", function (req, res) {
-      res.sendFile("index.html", { root: "dist/<open-workout-web>/" });
-    });
-  }
+// Serve only the static files form the dist directory
+// Replace the '/dist/<to_your_project_name>'
+app.use(express.static(__dirname + '/dist/open-workout-web'));
 
-}
+app.get('*', function(req,res) {
+  // Replace the '/dist/open-workout-web/index.html'
+  res.sendFile(path.join(__dirname + '/dist/open-workout-web/index.html'));
+});
+// Start the app by listening on the default Heroku port
+app.listen(process.env.PORT || 8080);
