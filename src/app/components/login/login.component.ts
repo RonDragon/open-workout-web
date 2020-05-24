@@ -17,41 +17,11 @@ import { Subscription } from "rxjs";
   styleUrls: ["./login.component.css"],
 })
 export class LoginComponent implements OnInit, OnDestroy {
-  authSubscription: Subscription;
-  user: SocialUser;
-  loggedIn: boolean;
-  constructor(
-    private authService: AuthService,
-    private userService: UserService,
-    private router: Router
-  ) {}
+  constructor(private authService: AuthService) {}
 
-  ngOnInit() {
-    this.authSubscription = this.authService.authState.subscribe(
-      (user) => {
-        this.user = user;
-        this.loggedIn = user != null;
-        this.userService.loggedUserSubject.next(user);
-        console.log(this.user);
-        if (this.user != null) {
-          this.userService.loggedInSubject.next(true);
-        } else {
-          this.userService.loggedInSubject.next(false);
-          this.router.navigate(["login"]);
-        }
-      },
-      (error) => {
-        console.error(error);
-      }
-    );
-  }
+  ngOnInit() {}
 
-  ngOnDestroy(): void {
-    if (this.user === null) {
-      console.log("unsub");
-      this.authSubscription.unsubscribe();
-    }
-  }
+  ngOnDestroy(): void {}
   signInWithFB(): void {
     this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
   }

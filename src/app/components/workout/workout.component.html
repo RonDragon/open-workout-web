@@ -1,1 +1,7 @@
-<p>workout works!</p>
+
+  <mat-button-toggle-group (change)="navigateTo($event)" class="vertical-center" name="fontStyle" aria-label="Font Style">
+    <mat-button-toggle value="createWorkout">Create Workout</mat-button-toggle>
+    <mat-button-toggle value="updateWorkout">Update Workout</mat-button-toggle>
+
+  </mat-button-toggle-group>
+<router-outlet></router-outlet>

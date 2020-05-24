@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+
 
 import {
   SocialLoginModule,
@@ -17,6 +19,8 @@ import { LoginComponent } from './components/login/login.component';
 import { HeaderComponent } from './components/header/header.component';
 import { WorkoutComponent } from './components/workout/workout.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CreateWorkoutComponent } from './components/workout/create-workout/create-workout.component';
+import { UpdateWorkoutComponent } from './components/workout/update-workout/update-workout.component';
 const config = new AuthServiceConfig([
   {
     id: GoogleLoginProvider.PROVIDER_ID,
@@ -38,6 +42,8 @@ export function provideConfig() {
     LoginComponent,
     HeaderComponent,
     WorkoutComponent,
+    CreateWorkoutComponent,
+    UpdateWorkoutComponent,
   ],
   imports: [
     HttpClientModule,
@@ -48,7 +54,8 @@ export function provideConfig() {
     BrowserAnimationsModule,
     FormsModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    MatButtonToggleModule
   ],
   providers: [
     {

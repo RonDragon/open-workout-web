@@ -1,7 +1,8 @@
 <mat-toolbar>
-  <div *ngIf="loggedIn">
+  <span *ngIf="loggedIn">
   <h5 style="display: inline-block;">Welcome {{loggedUser.name}}! </h5>
   <button  mat-fab type="button"
+  class="vertical-right"
   (click)="signOut()"
    [ngClass]="{'facebook':loggedUser.provider === 'FACEBOOK','google': loggedUser.provider === 'GOOGLE'}">
    Sign Out
@@ -9,5 +10,6 @@
    <img *ngIf="icon" style="width: 15px;" [src]="icon" />
 
   </button>
-</div>
+</span>
+
 </mat-toolbar>
