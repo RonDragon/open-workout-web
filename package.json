@@ -1,9 +1,10 @@
 {
   "name": "open-workout-web",
   "version": "0.0.0",
+  "main": "dist/server.js",
   "scripts": {
     "ng": "ng",
-    "start": "node server.js",
+    "start":"node dist/server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
