@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "main": "dist/server.js",
   "scripts": {
-    "ng": "ng",
+    "heroku-postbuild": "ng build ",
     "start":"node dist/server.js",
+    "ng": "ng",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
