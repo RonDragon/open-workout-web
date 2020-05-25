@@ -25,7 +25,7 @@ const config = new AuthServiceConfig([
   {
     id: GoogleLoginProvider.PROVIDER_ID,
     provider: new GoogleLoginProvider(
-      '248513175219-3bh337ta8t2ajsj0ebam4j0qd8v204cf.apps.googleusercontent.com'
+      'edsGbnF3FdWVVn7cwv8aFQh2'
     ),
   },
   {
