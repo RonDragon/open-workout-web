@@ -4,7 +4,6 @@
   "main": "dist/server.js",
   "scripts": {
     "heroku-postbuild": "ng build ",
-    "start":"node dist/server.js",
     "ng": "ng",
     "build": "ng build",
     "test": "ng test",
