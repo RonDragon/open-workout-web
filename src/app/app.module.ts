@@ -3,10 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatButtonModule} from '@angular/material/button';
-import {MatButtonToggleModule} from '@angular/material/button-toggle';
-
+import { MaterialModule } from './material.module';
 
 import {
   SocialLoginModule,
@@ -53,9 +50,7 @@ export function provideConfig() {
     SocialLoginModule,
     BrowserAnimationsModule,
     FormsModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatButtonToggleModule
+    MaterialModule
   ],
   providers: [
     {

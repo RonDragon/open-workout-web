@@ -10,24 +10,14 @@ import { ApiService } from "src/app/services/api.service";
   styleUrls: ["./workout.component.css"],
 })
 export class WorkoutComponent implements OnInit {
-  userData;
   constructor(private userService: UserService, private api: ApiService, private router: Router) {}
 
   ngOnInit() {
-    if (this.userService.user) {
-      this.api.getUserWorkoutData(this.userService.user).subscribe(
-        (data) => {
-          if (data.rc === 0) {
-            this.userData = data;
-            console.log(data);
-          }
-        },
-        (error) => {
-          console.error(error);
-        }
-      );
-    }
+
+
   }
+
+
   navigateTo(event){
     this.router.navigate(['workout/' +event.value]);
 

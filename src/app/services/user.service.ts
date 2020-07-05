@@ -1,16 +1,16 @@
 import { Injectable } from "@angular/core";
 import { SocialUser } from "angularx-social-login";
 import { ApiService } from "./api.service";
-import { Subject } from "rxjs";
+import { Subject, BehaviorSubject } from "rxjs";
 import { Router } from "@angular/router";
 
 @Injectable({
   providedIn: "root",
 })
 export class UserService {
-  loggedInSubject: Subject<boolean> = new Subject();
-  loggedUserSubject: Subject<SocialUser> = new Subject();
-  userDataSubject: Subject<any> = new Subject();
+  loggedInSubject: BehaviorSubject<boolean> = new BehaviorSubject(null);
+  loggedUserSubject: BehaviorSubject<SocialUser> = new BehaviorSubject(null);
+  userDataSubject: BehaviorSubject<any> = new BehaviorSubject(null);
   user;
   constructor(private api: ApiService, private router: Router) {}
 
